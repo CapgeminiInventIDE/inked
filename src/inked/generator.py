@@ -216,7 +216,7 @@ class WordGenerator(object):
             augmentor=self.augmentor, warehouses=warehouses, block_dataset_size=block_dataset_size
         )
 
-    def generate(self, text: str, augment_word: bool, spacer: Union[FixedSpacer, RandomSpacer] = FixedSpacer()) -> Word:
+    def generate(self, text: str, augment_word: bool = False, spacer: Union[FixedSpacer, RandomSpacer] = FixedSpacer()) -> Word:
         """Generates a Word from the requested text and spacing strategy, it will then apply any augmentations requested"""
         if "cursive" in self.chargen.warehouses:
             raise Exception(

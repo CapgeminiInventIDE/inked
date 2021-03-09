@@ -21,7 +21,7 @@ Copy and save this as a file.json and pass it into the Augmentor() to customise 
 
 - To keep the background transparent in the final word image, simply set `"enabled"` to `false` for both `bg_image` and `bg_colour` in the word augments.
 
-- To disable character level augments, and reduce the maximum number of word augments, simply change the `min/max_augments` for each.
+- To disable character level augments, and reduce the maximum number of word augments, simply change the `min/max_augments` for each or set each Character augment to false.
 
 ``` json
 [

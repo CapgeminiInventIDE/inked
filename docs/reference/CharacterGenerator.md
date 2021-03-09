@@ -15,7 +15,7 @@ char.image.show()
 char.save("output.png")
 ```
 
-### `CharacterGenerator` Parameters
+### CharacterGenerator Parameters
 
 ``` python
 from src.inked import CharacterGenerator
@@ -41,7 +41,7 @@ char_factory = CharacterGenerator(augmentor = True)
 
 - `False`: (Default) No image augmentations will be used.
 - `True`: Enables the default Augmentor and applies a random selection of augments on the character image.
-- `Augmentor`: Specify your own augmentor and settings. See Augmentor.
+- `Augmentor`: Specify your own augmentor and settings. See [Augmentor](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/Augmentor.md).
 
 ``` python
 from src.inked import CharacterGenerator

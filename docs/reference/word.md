@@ -1,6 +1,6 @@
 # Word Objects
 
-The WordGenerator methods `generate(text)` and `generate_cursive(text)` return a Word object.
+The [WordGenerator](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/WordGenerator.md) methods `generate(text)` and `generate_cursive(text)` return a Word object.
 
 ```python
 from src.inked import WordGenerator
@@ -9,7 +9,8 @@ factory = WordGenerator()
 word = factory.generate("Hello World")
 ```
 
-### `Word` Methods
+### Word Methods
+
 ```python
 # save word image and all metadata
 word.save('output.png')
@@ -21,7 +22,7 @@ word.save('output.png')
 !!! Note:
     Character and Word objects are almost identical in methods and attributes. The most notable difference is the augments available to each.
 
-### `Word` Attributes
+### Word Attributes
 
 A given Word Instance will have the following attributes you can inspect and use.
 

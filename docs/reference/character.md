@@ -3,14 +3,14 @@
 Create a Character object by using the CharacterGenerator method `__getitem__`.
 
 !!! Note:
-    While you are able to create individual characters (outlined below) this is not required to generate word images at it will all be taken care of for you in the WordGenerator class. See [WordGenerator](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/WordGenerator.md) for more information and examples.
+    While you are able to create individual characters (outlined below) this is not required to generate word images at it will all be taken care of for you in the WordGenerator class. See [WordGenerator](WordGenerator.md) for more information and examples.
 
 ```python
-from src.inked import CharacterGenerator
+from inked import CharacterGenerator
 
-chargen = CharacterGenerator(augmentor=True)
-char = chargen("a")
-char2 = chargen("b")
+chargen = CharacterGenerator()
+char = chargen["a"]
+char2 = chargen["b"]
 ```
 
 ## Character Methods
@@ -23,7 +23,7 @@ char.save('output.png')
 word = sum([char, char2])
 ```
 
-- `sum([char, char2])`: Adds (concatinates left to right) two or more Character instances together, returning a `Word` instance (see [Word](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/Word.md)).
+- `sum([char, char2])`: Adds (concatinates left to right) two or more Character instances together, returning a `Word` instance (see [Word](word.md)).
 - `char.save(path)`: Will save image to disc and attached all the augmentations and information (including the label or text of the image) as metadata within the saved image.
 - `char.augment(augmentor=Augmentor())`: Manually apply augmentations to the character image. Works the same as specifying the Augmentor in CharacterGenerator().
 
@@ -43,4 +43,4 @@ With the above code, `char` will have a set of attributes you can inspect to und
 - `char.metadata`: Stores a dict of what augmentations have been done to the image at what severity levels.
 
 !!! Note:
-    Character and [Word](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/Word.md) objects are almost identical in methods and attributes. The most notable difference is the augments available to each.
+    Character and [Word](word.md) objects are almost identical in methods and attributes. The most notable difference is the augments available to each.

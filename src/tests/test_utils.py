@@ -1,8 +1,10 @@
+import io
 import numpy as np
 import pytest
 from PIL import Image
+from pathlib import Path
 
-from ..inked.utils import white_to_transparent
+from ..inked.utils import white_to_transparent, pil_to_bytes
 
 ALL_WHITE = np.ones((3, 3, 3), dtype=np.uint8) * 255
 
@@ -45,3 +47,12 @@ ALL_WHITE_GREYSCALE = np.ones((3, 3, 1), dtype=np.uint8)[0] * 255
 def test_white_to_transparent(incoming, expected):
     incoming = Image.fromarray(incoming)
     assert np.equal(np.array(white_to_transparent(incoming)), expected).all()
+
+
+def test_pil_to_bytes():
+    pil_img = Image.open(str(Path(__file__).parent / "data" / "demo.png")).convert("RGBA")
+    bytes_img = pil_to_bytes(pil_img)
+    # check image hasn't changed
+    assert np.array(Image.open(io.BytesIO(bytes_img)).convert("RGBA")).all() == np.array(pil_img).all()
+    # check early return
+    assert bytes_img == pil_to_bytes(bytes_img)

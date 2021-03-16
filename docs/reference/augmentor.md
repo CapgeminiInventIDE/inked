@@ -16,12 +16,6 @@ aug = Augmentor(config = config)
 
 Copy and save this as a file.json and pass it into the Augmentor() to customise how many augmentations, which augmentations and at what severity is applied (randomly selected between the min/max ranges).
 
-**Examples:**
-
-- To keep the background transparent in the final word image, simply set `"enabled"` to `false` for both `bg_image` and `bg_colour` in the word augments.
-
-- To disable character level augments, and reduce the maximum number of word augments, simply change the `min/max_augments` for each or set each Character augment to `false`.
-
 ``` json
 [
     {
@@ -53,4 +47,10 @@ Copy and save this as a file.json and pass it into the Augmentor() to customise 
 ```
 
 !!! Note:
-    Where `min_severity and min_severity == 99`, those augmentations aren't affected by changes to severity. Severity was simply kept for consistancy in method variable handeling.
+    Where `min_severity` and `min_severity == 99`, those augmentations aren't affected by changes to severity. Severity was simply kept for consistancy in method variable handeling.
+
+**Examples:**
+
+- To keep the background transparent in the final word image, simply set `"enabled"` to `false` for both `bg_image` and `bg_colour` in the word augments.
+
+- To disable character level augments, and reduce the maximum number of word augments, simply change the `min/max_augments` for each or set each Character augment to `false`.

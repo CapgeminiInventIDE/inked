@@ -202,7 +202,7 @@ class WordGenerator(object):
     def __init__(
         self,
         augmentor: Union[Augmentor, bool] = False,
-        warehouses=["fonts", "block", "cursive"],
+        warehouses=["fonts", "block"],
         block_dataset_size: str = "sml",
     ):
         if isinstance(augmentor, Augmentor):

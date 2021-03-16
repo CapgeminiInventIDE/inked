@@ -1,9 +1,9 @@
 # Word Objects
 
-The [WordGenerator](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/WordGenerator.md) methods `generate(text)` and `generate_cursive(text)` return a Word object.
+The [WordGenerator](WordGenerator.md) methods `generate(text)` and `generate_cursive(text)` return a Word object.
 
 ```python
-from src.inked import WordGenerator
+from inked import WordGenerator
 
 factory = WordGenerator()
 word = factory.generate("Hello World")
@@ -50,3 +50,6 @@ print(word.word_metadata)
 ```
 
 - `word.word_metadata`: Stores a dict of what augmentations have been applied to the image at the **word level**, and at what severity level. Added to the metadata of the image when using the `word.save()` method.
+
+!!! Note:
+    word.word_metadata will be an empty dict unless `augmentor = True` **and** `augment_word = True`.

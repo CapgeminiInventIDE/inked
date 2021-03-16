@@ -16,7 +16,7 @@ from src.inked.lmdb_ctx import LMDBMaker
 def main(n_words: int = 1):
     augmentor = Augmentor()
     factory = WordGenerator(
-        augmentor=augmentor, warehouses=["cursive", "fonts", "block"], block_dataset_size="sml"
+        augmentor=augmentor, warehouses=["fonts", "block"], block_dataset_size="sml"
     )  # 'cursive'
     char_dict = CharDict(
         distribution={"english_words": 0.1, "google_words": 0.6, "additional_words": 0.3,},
@@ -28,7 +28,7 @@ def main(n_words: int = 1):
     #     for _ in tqdm(range(n_words)):
     #         rand_word = char_dict[char_dict.random_char]
     #         word = factory.generate(rand_word, augment_word=True, spacer=RandomSpacer(0))
-    #         lmdb.append(word.text, word.image.encode())
+            # lmdb.append(word.text, word.image)
 
     # NORMAL
     st = time.time()

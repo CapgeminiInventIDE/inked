@@ -1,15 +1,15 @@
 # Creating Characters
 
-Generating a [Character](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/Character.md) from a random method is easy. Simply initialise the `CharacterGenerator` class and choose a character to generate.
+Generating a [Character](character.md) from a random method is easy. Simply initialise the `CharacterGenerator` class and choose a character to generate.
 
 !!! Note:
-    [WordGenerator](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/WordGenerator.md) can automatically setup a CharacterGenerator class (if required), removing the need for you to create individual characters yourself.
+    [WordGenerator](WordGenerator.md) can automatically setup a CharacterGenerator class (if required), removing the need for you to create individual characters yourself.
 
 ```python
-from src.inked import CharacterGenerator
+from inked import CharacterGenerator
 
 char_factory = CharacterGenerator()
-char = char_factory("a")
+char = char_factory["a"]
 
 char.image.show()
 char.save("output.png")
@@ -18,7 +18,7 @@ char.save("output.png")
 ### CharacterGenerator Parameters
 
 ``` python
-from src.inked import CharacterGenerator
+from inked import CharacterGenerator
 
 char_factory = CharacterGenerator(warehouses = ['fonts', 'block'])
 ```
@@ -32,19 +32,18 @@ char_factory = CharacterGenerator(warehouses = ['fonts', 'block'])
     Currently only supports single character strings as input. For example, you are unable to specify a character using encoding such as ASCI.
 
 ``` python
-from src.inked import CharacterGenerator
+from inked import CharacterGenerator, Augmentor
 
-char_factory = CharacterGenerator(augmentor = True)
+char_factory = CharacterGenerator(augmentor = Augmentor())
 ```
 
-`augmentor:Union[Bool, Augmentor] = False` - Determines if the character image will be augmented.
+`augmentor: Optional[Augmentor] = None` - Determines if the character image will be augmented.
 
-- `False`: (Default) No image augmentations will be used.
-- `True`: Enables the default Augmentor and applies a random selection of augments on the character image.
-- `Augmentor`: Specify your own augmentor and settings. See [Augmentor](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/Augmentor.md).
+- `None`: (Default) No image augmentations will be used.
+- `Augmentor`: Specify the augmentor and settings. See [Augmentor](Augmentor.md).
 
 ``` python
-from src.inked import CharacterGenerator
+from inked import CharacterGenerator
 
 char_factory = CharacterGenerator(warehouses = ['block'], block_dataset_size = 'sml')
 ```

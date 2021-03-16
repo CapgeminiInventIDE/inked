@@ -5,6 +5,8 @@ from typing import Any, Dict
 
 import lmdb
 
+from .utils import pil_to_bytes
+
 logger = logging.getLogger()
 
 
@@ -35,7 +37,7 @@ class LMDBMaker(object):
 
     def append(self, label: str, img: bytes):
         """Adds in the label and image into cache, then batches the saving to disk"""
-        self.cache[f"image-{self.cnt:09d}".encode()] = img
+        self.cache[f"image-{self.cnt:09d}".encode()] = pil_to_bytes(img)
         self.cache[f"label-{self.cnt:09d}".encode()] = label.encode()
         if self.cnt % self.batch_size == 0:
             self._write_to_cache()

@@ -1,6 +1,6 @@
 # Creating Words with WordGenerator
 
-Generating a [Word](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/Word.md) image from a string is easy. Simply initialise the `WordGenerator` class and choose a string to generate.
+Generating a [Word](word.md) image from a string is easy. Simply initialise the `WordGenerator` class and choose a string to generate.
 
 ``` python
 from src.inked import WordGenerator
@@ -13,9 +13,9 @@ word.image.show()
 word.save("output.png")
 ```
 
-Under the hood, this is actually initializing a [CharacterGenerator](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/CharacterGenerator.md) and generating individual [character](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/Character.md)s, adding them together to create the final [Word](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/Word.md) object.
+Under the hood, this is actually initializing a [CharacterGenerator](CharacterGenerator.md) and generating individual [character](character.md)s, adding them together to create the final [Word](word.md) object.
 
-### `WordGenerator` Parameters
+### WordGenerator Parameters
 
 ``` python
 from src.inked import WordGenerator
@@ -42,7 +42,7 @@ factory = WordGenerator(augmentor = True)
 
 - `False`: (Default) No image augmentations will be used.
 - `True`: Enables the default Augmentor and applies a random selection of augments on each character image (separately).
-- `Augmentor`: Specify your own augmentor and settings. See [Augmentor](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/Augmentor.md).
+- `Augmentor`: Specify your own augmentor and settings. See [Augmentor](Augmentor.md).
 
 ### WordGenerator Methods
 
@@ -61,7 +61,7 @@ word = factory.generate("Hello World")
 
 - `text: str`: (Required) the text string to generate.
 - `augment_word: bool`: Enables word level augmentations (Augmentor is required to be set).
-- `spacer: Union[FixedSpacer, RandomSpacer]`: The amount of space applied to each character when forming a word (defaults to `FixedSpacer(0)`) See spacer.
+- `spacer: Union[FixedSpacer, RandomSpacer]`: The amount of space applied to each character when forming a word (defaults to `FixedSpacer(0)`) See [spacer](spacer.md).
 
 ``` python
 # generate words using the cursive neural network

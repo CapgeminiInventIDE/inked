@@ -17,6 +17,7 @@ Evolving repo of the inked
 
 ## Usage
 
+
 String-to-Image generation tool, designed to speed up data generation in Natural Language Processing, Scene Text Detection and other text as image projects.
 
 Run a basic Hello World text as image generation.
@@ -29,6 +30,16 @@ word = factory.generate("Hello World")
 
 word.save("Hello_World.png")
 ```
+
+Generate images with no augmentations (transparent background removed for viewing):
+
+![Hello World No Augmentations](docs/assets/imgs/hello_world_no_augments.png)
+
+Or augment each individual character and the whole word to create truly endless images:
+
+![Hello World Augmentations](docs/assets/imgs/hello_world_augments.png)
+
+![Hello World Augmentations2](docs/assets/imgs/hello_world_augments2.png)
 
 For more advanced setups see our [User Guide](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/Tutorial-User_Guide.md).
 ## License

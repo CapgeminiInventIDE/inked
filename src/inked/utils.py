@@ -1,5 +1,6 @@
 from pathlib import Path
 from typing import Any, List
+from io import BytesIO
 
 import cv2
 import numpy as np
@@ -88,3 +89,11 @@ def darken_greys(image: Image.Image, max: int = 127):
         img = cv2.cvtColor(img, cv2.COLOR_RGB2RGBA)
         img[:, :, 3] = transparency
     return Image.fromarray(img)
+
+def pil_to_bytes(img: Image.Image):
+    """Converts an image in memory to bytes object, if it is not already"""
+    if isinstance(img, bytes):
+        return img
+    buffered = BytesIO()
+    img.save(buffered, format="png")
+    return buffered.getvalue()

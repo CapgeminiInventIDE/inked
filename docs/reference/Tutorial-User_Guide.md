@@ -46,7 +46,7 @@ if __name__ == "__main__":
 ## Advanced Data Generation
 
 The below setup allows you to save images to straight to LMDB format - saving IO write time when generating and reading in millions of images and their labels.
-We've also added in a word generator to automatically select words to generate, along with manually specifying an Augmentor (see [Augmentor](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/Augmentor.md) to learn more about customising augmentations).
+We've also added in a word generator to automatically select words to generate, along with manually specifying an Augmentor (see [Augmentor](Augmentor.md) to learn more about customising augmentations).
 
 ``` python
 import numpy as np
@@ -68,7 +68,7 @@ def random_word_images_to_lmdb(n_words: int, lmdb_folder: str):
                     block_dataset_size="lrg"
                 )
     char_dict = CharDict(
-        distribution={"english_words": 0.4, "google_words": 0.6, "additional_words": 0.0,},
+        distribution={"english_words": 0.3, "google_words": 0.6, "additional_words": 0.1,},
         possible_chars=factory.chargen.possible,
     )
 

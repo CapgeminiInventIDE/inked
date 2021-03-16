@@ -7,7 +7,13 @@ repo_name: "CapgeminiInventIDE/inked"
 nav:
   - Welcome: index.md
   - Reference:
+      Tutorial - User Guide: reference/Tutorial-User_Guide.md
       Character: reference/character.md
+      CharacterGenerator: reference/CharacterGenerator.md
+      Word: reference/word.md
+      WordGenerator: reference/WordGenerator.md
+      Augmentor: reference/Augmentor.md
+      Spacer: reference/spacer.md
   - Contributing: contributing.md
   - Code of Conduct: code_of_conduct.md
   - Changelog: changelog.md

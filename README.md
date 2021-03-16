@@ -17,8 +17,20 @@ Evolving repo of the inked
 
 ## Usage
 
-...
+String-to-Image generation tool, designed to speed up data generation in Natural Language Processing, Scene Text Detection and other text as image projects.
 
+Run a basic Hello World text as image generation.
+
+``` python
+from inked import WordGenerator
+
+factory = WordGenerator()
+word = factory.generate("Hello World")
+
+word.save("Hello_World.png")
+```
+
+For more advanced setups see our [User Guide](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/Tutorial-User_Guide.md).
 ## License
 
 * [Mozilla Public License 2.0](/LICENSE)

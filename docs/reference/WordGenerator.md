@@ -1,6 +1,6 @@
 # Creating Words with WordGenerator
 
-Generating a word image from a string is easy. Simply initialise the `WordGenerator` class and choose a string to generate.
+Generating a [Word](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/Word.md) image from a string is easy. Simply initialise the `WordGenerator` class and choose a string to generate.
 
 ``` python
 from src.inked import WordGenerator
@@ -12,6 +12,8 @@ word = factory.generate("Hello World")
 word.image.show()
 word.save("output.png")
 ```
+
+Under the hood, this is actually initializing a [CharacterGenerator](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/CharacterGenerator.md) and generating individual [character](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/Character.md)s, adding them together to create the final [Word](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/Word.md) object.
 
 ### `WordGenerator` Parameters
 
@@ -72,3 +74,6 @@ cursive_word = factory.generate_cursive("Hello World")
 
 - `text: str`: (Required) the text string to generate.
 - `augment_word: bool`: Enables word level augmentations (Augmentor is required to be set).
+
+!!! Note:
+    `generate_cursive` is not able to be used with character level augmentations.

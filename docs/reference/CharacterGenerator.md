@@ -1,9 +1,9 @@
 # Creating Characters
 
-Generating a character from a random method is easy. Simply initialise the `CharacterGenerator` class and choose a character to generate.
+Generating a [Character](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/Character.md) from a random method is easy. Simply initialise the `CharacterGenerator` class and choose a character to generate.
 
 !!! Note:
-    WordGenerator can automatically setup a CharacterGenerator class (if required), removing the need for you to create individual characters yourself.
+    [WordGenerator](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/WordGenerator.md) can automatically setup a CharacterGenerator class (if required), removing the need for you to create individual characters yourself.
 
 ```python
 from src.inked import CharacterGenerator

@@ -1,7 +1,6 @@
 # Augmentor
 
-
-
+Used to morph Character and Word objects.
 
 ## Fully Custom Augmentor Setup
 

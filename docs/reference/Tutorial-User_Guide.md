@@ -1,9 +1,9 @@
 # Basic Data Generation
 
-Run a basic Hello World string creation.
+Run a basic "Hello World" string creation with character and word augmentations.
 
 ``` python
-from inked import WordGenerator, FixedSpacer
+from inked import WordGenerator
 
 factory = WordGenerator(
                 augmentor=True,

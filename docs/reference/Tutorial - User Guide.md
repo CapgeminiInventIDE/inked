@@ -1,5 +1,21 @@
 # Basic Data Generation
 
+Run a basic Hello World string creation.
+
+``` python
+from inked import WordGenerator, FixedSpacer
+
+factory = WordGenerator(
+                augmentor=True,
+                warehouses=["fonts", "block"],
+                block_dataset_size="sml"
+            )
+
+word = factory.generate("Hello World", augment_word=True)
+word.save("Hello_World.png")
+
+```
+
 ## Generating Images from a list of strings
 
 You can quickly generate a random image with full augments from a given string with the simple setup below, saving images to disc with the metadata containing the text label, augmentations and their severity.
@@ -14,7 +30,8 @@ np.random.seed(42)
 def generate_list_of_word_images(words_list:list):
     factory = WordGenerator(
                     augmentor=True,
-                    warehouses=["fonts", "block"], block_dataset_size="sml"
+                    warehouses=["fonts", "block"],
+                    block_dataset_size="sml"
                 )
 
     for word_string in tqdm(words_list):

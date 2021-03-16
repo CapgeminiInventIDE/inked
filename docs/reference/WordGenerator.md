@@ -40,9 +40,9 @@ factory = WordGenerator(augmentor = True)
 
 - `False`: (Default) No image augmentations will be used.
 - `True`: Enables the default Augmentor and applies a random selection of augments on each character image (separately).
-- `Augmentor`: Specify your own augmentor and settings. See Augmentor.
+- `Augmentor`: Specify your own augmentor and settings. See [Augmentor](https://github.com/CapgeminiInventIDE/inked/tree/main/docs/reference/Augmentor.md).
 
-### `WordGenerator` Methods
+### WordGenerator Methods
 
 ```python
 from src.inked import WordGenerator

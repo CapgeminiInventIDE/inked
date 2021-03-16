@@ -82,6 +82,6 @@ def test_word_generator_init_augment():
 
 
 def test_word_generate_cursive():
-    gen1 = WordGenerator(augmentor=Augmentor())
-    gen2 = WordGenerator(augmentor=None)
+    gen1 = WordGenerator(warehouses = ["cursive"], augmentor=Augmentor())
+    gen2 = WordGenerator(warehouses = ["cursive"], augmentor=None)
     assert gen1.generate_cursive("a", True) != gen2.generate_cursive("a", False)

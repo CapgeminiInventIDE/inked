@@ -13,7 +13,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Run on repl.it](https://docs.repl.it/images/repls/run-on-replit.svg)](https://repl.it/github/CapgeminiInventIDE/inked)
 
-Evolving repo of the inked
+Evolving repo of the inked capability which turns strings into generated images for training with Natural Language Processing
 
 ## Usage
 
